@@ -7,7 +7,7 @@ os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 # Define paths for input and output files (ensure correct paths)
 input_file = os.path.join("Resources/election_data.csv")
-output_file = os.path.join("Analysis_election_data_analysis.txt")
+output_file = os.path.join("Analysis/election_data_analysis.txt")
 
 # Track the total number of votes cast
 total_votes = 0
@@ -28,9 +28,6 @@ with open(input_file) as election_data:
 
     # Keep track of votes for each candidate
     for row in reader:
-
-        # Print a loading indicator (for large datasets)
-        print(". ", end="")
 
         # Increment the total vote count for each row
         total_votes += 1
